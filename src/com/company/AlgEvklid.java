@@ -3,11 +3,6 @@ package com.company;
 import java.util.Scanner;
 
 public class AlgEvklid {
-    static int getNumb() {
-        Scanner num = new Scanner(System.in);
-
-        return num.nextInt();
-    }
 
     static int gcd(int x, int y) {
         if (y == 0) {
@@ -19,17 +14,20 @@ public class AlgEvklid {
     }
 
     public static void main(String[] args) {
-        System.out.print("Enter a: ");
-        int a = getNumb();
-
-        System.out.print("Enter b: ");
-        int b = getNumb();
+        Scanner num = new Scanner(System.in);
 
         try {
+            System.out.print("Enter a: ");
+            int a = num.nextInt();
+
+            System.out.print("Enter b: ");
+            int b = num.nextInt();
+
             System.out.print(gcd(a, b));
         } catch (java.util.InputMismatchException e) {
             System.out.print("Error");
         }
+
 
     }
 

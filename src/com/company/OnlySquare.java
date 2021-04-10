@@ -5,15 +5,10 @@ import java.util.Scanner;
 public class OnlySquare {
     public static int i = 0;
     public static int errorInput = 0;
-
-    static int getNumb() {
-        Scanner num = new Scanner(System.in);
-
-        return num.nextInt();
-    }
+    public static Scanner num = new Scanner(System.in);
 
     static int reverse() {
-        int x = getNumb();
+        int x = num.nextInt();
 
         if (x != 0) {
 

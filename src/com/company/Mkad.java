@@ -11,19 +11,24 @@ public class Mkad {
 
     public static void main(String[] args) {
         try {
+            Scanner num = new Scanner(System.in);
             System.out.print("Enter v: ");
-            int v = getNumb();
+            int v = num.nextInt();
 
             System.out.print("Enter t: ");
-            int t = getNumb();
+            int t = num.nextInt();
 
             if (t < 0) {
-
                 System.out.println("Error");
             } else {
                 int res = 0;
-                final int numMark = 108;
-                res = Math.abs((v * t) % numMark + 1);
+                final int numMark = 109;
+                if (v < 0) {
+                    res = numMark - Math.abs((v * t) % numMark);
+                } else {
+                    res = Math.abs((v * t) % numMark);
+                }
+
 
                 System.out.println(res);
             }

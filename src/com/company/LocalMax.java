@@ -38,15 +38,11 @@ public class LocalMax {
     public static int max = 0;
     public static int counter = 0;
     public static int min = 0;
+    public static Scanner num = new Scanner(System.in);
 
-    static int getNumb() {
-        Scanner num = new Scanner(System.in);
-
-        return num.nextInt();
-    }
 
     static int addData() {
-        int x = getNumb();
+        int x = num.nextInt();
         if (x != 0) {
             addData();
         }

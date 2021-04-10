@@ -3,14 +3,10 @@ package com.company;
 import java.util.Scanner;
 
 public class SeqRev {
-    static int getNumb() {
-        Scanner num = new Scanner(System.in);
-
-        return num.nextInt();
-    }
+    public static Scanner num = new Scanner(System.in);
 
     static int reverse() {
-        int x = getNumb();
+        int x = num.nextInt();
         if (x != 0) {
 
             reverse();

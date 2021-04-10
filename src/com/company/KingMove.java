@@ -3,42 +3,32 @@ package com.company;
 import java.util.Scanner;
 
 public class KingMove {
-    static int getNumb() {
-        Scanner num = new Scanner(System.in);
-
-        return num.nextInt();
-    }
 
     public static void main(String[] args) {
         try {
+            Scanner num = new Scanner(System.in);
+
             System.out.print("Enter x1: ");
-            int x1 = getNumb();
+            int x1 = num.nextInt();
 
             System.out.print("Enter y1: ");
-            int y1 = getNumb();
+            int y1 = num.nextInt();
 
             System.out.print("Enter x2: ");
-            int x2 = getNumb();
+            int x2 = num.nextInt();
 
             System.out.print("Enter y2: ");
-            int y2 = getNumb();
+            int y2 = num.nextInt();
 
             String res = "NO";
 
-            //  HORIZONTAL
             if ((x1 + 1 == x2) || (x1 - 1 == x2) && y1 == y2) {
 
                 res = "YES";
-            }
-
-            //  VERTICAL
-            else if ((y1 + 1 == y2) || (y1 - 1 == y2) && x1 == x2) {
+            } else if ((y1 + 1 == y2) || (y1 - 1 == y2) && x1 == x2) {
 
                 res = "YES";
-            }
-
-            //  DIAGONAL
-            else if ((x1 + 1 == x2 && y1 + 1 == y2) || (x1 + 1 == x2 && y1 - 1 == y2) || (x1 - 1 == x2 && y1 + 1 == y2) || (x1 - 1 == x2 && y1 - 1 == y2)) {
+            } else if ((x1 + 1 == x2 && y1 + 1 == y2) || (x1 + 1 == x2 && y1 - 1 == y2) || (x1 - 1 == x2 && y1 + 1 == y2) || (x1 - 1 == x2 && y1 - 1 == y2)) {
 
                 res = "YES";
             }

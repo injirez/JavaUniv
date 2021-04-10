@@ -3,40 +3,35 @@ package com.company;
 import java.util.Scanner;
 
 public class Equation {
-    static int getNumb() {
-        Scanner num = new Scanner(System.in);
 
-        return num.nextInt();
-    }
 
     public static void main(String[] args) {
         try {
+            Scanner num = new Scanner(System.in);
+
             System.out.println("(ax + b)/(cx + d) = 0");
 
             System.out.print("Enter a: ");
-            double a = getNumb();
+            int a = num.nextInt();
 
             System.out.print("Enter b: ");
-            double b = getNumb();
+            int b = num.nextInt();
 
             System.out.print("Enter c: ");
-            double c = getNumb();
+            int c = num.nextInt();
 
             System.out.print("Enter d: ");
-            double d = getNumb();
+            int d = num.nextInt();
 
-            if ((b * c == a * d) && a != 0 && b != 0) {
-
-                System.out.println("NO");
-            } else if (a == 0 && b == 0) {
-
+            if (a == 0 && b == 0) {
                 System.out.println("INF");
-            } else if (((-d / c) != 0) && a != 0 && b != 0) {
-
-                double x = -b / a;
-                int xInt = (int) x;
-
-                System.out.println(xInt);
+            } else if (a == 0 || b * c == a * d) {
+                System.out.println("NO");
+            } else if (b % a == 0) {
+                int x = (-b / a);
+                System.out.println(x);
+            } else {
+                System.out.println("NO");
             }
         } catch (java.util.InputMismatchException e) {
             System.out.print("Error");
